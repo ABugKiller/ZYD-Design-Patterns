@@ -1,4 +1,4 @@
-package com.ad;
+package com.ad.枚举;
 
 
 /**
@@ -16,10 +16,10 @@ class Resource {
 // 同时每个枚举实例都是static final类型的，也就表明只能被实例化一次
 public enum SomeThing {
     INSTANCE;
-    private Resource instance;
+    private Resource instance = new Resource();;
 
     SomeThing() {
-        instance = new Resource();
+
     }
 
     public Resource getInstance() {
