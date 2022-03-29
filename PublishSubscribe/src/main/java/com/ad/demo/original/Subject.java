@@ -2,7 +2,7 @@
  * www.mockuai.com
  * Copyright (c) 2022 All Rights Reserved.
  */
-package com.ad.demo.case1;
+package com.ad.demo.original;
 
 /**
  * @author zhengyingdeng

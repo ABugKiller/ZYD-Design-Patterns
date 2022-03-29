@@ -2,9 +2,11 @@
  * www.mockuai.com
  * Copyright (c) 2022 All Rights Reserved.
  */
-package com.ad.demo.case1;
+package com.ad.demo.original;
 
 /**
+ * 同步方式
+ *
  * @author zhengyingdeng
  * @version $Id: TestController.java, v 0.1 2022-03-23 4:31 下午 zhengyingdeng Exp $$
  */

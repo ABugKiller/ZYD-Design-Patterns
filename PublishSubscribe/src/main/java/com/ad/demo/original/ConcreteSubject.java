@@ -2,7 +2,7 @@
  * www.mockuai.com
  * Copyright (c) 2022 All Rights Reserved.
  */
-package com.ad.demo.case1;
+package com.ad.demo.original;
 
 /**
  * @author zhengyingdeng
@@ -13,17 +13,18 @@ public class ConcreteSubject implements Subject {
     @Override
     public void registerObserver(Observer observer) {
         observer.update(new Message());
-        System.out.println("registerObserver");
+        System.out.println("----registerObserver----");
     }
 
     @Override
     public void removeObserver(Observer observer) {
         observer.update(new Message());
-        System.out.println("removeObserver");
+        System.out.println("----removeObserver----");
     }
 
     @Override
     public void notifyObservers(Message message) {
-        System.out.println("notifyObservers");
+        message.send("notify");
+        System.out.println("----notifyObservers----");
     }
 }
