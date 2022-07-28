@@ -15,6 +15,7 @@ public class Singleton {
 
     /**
      * 单线程写法
+     *
      * @return
      */
     public static Singleton getSingleton() {

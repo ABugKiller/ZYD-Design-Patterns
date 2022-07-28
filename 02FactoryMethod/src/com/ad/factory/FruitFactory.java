@@ -12,6 +12,7 @@ public interface FruitFactory {
 
     /**
      * 创建水果工厂
+     *
      * @author:ABugKiller
      * @date:Created in 2019/1/31 18:40
      * @return:

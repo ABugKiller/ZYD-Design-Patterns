@@ -8,7 +8,9 @@ import java.util.regex.Pattern;
  * @Date: Create in 2:14 下午 2020/11/19
  */
 public class AnonymousFilter extends SecurityFilter {
-    private String urlPattern; public AnonymousFilter(String urlPattern) {
+    private String urlPattern;
+
+    public AnonymousFilter(String urlPattern) {
         this.urlPattern = urlPattern;
     }
 
@@ -22,9 +24,9 @@ public class AnonymousFilter extends SecurityFilter {
 
     @Override
     public void doFilter(HttpRequest request, HttpResponse response) {
-        if(Pattern.matches(urlPattern, request.getUrl())){
+        if (Pattern.matches(urlPattern, request.getUrl())) {
             response.writeString(String.format("当前路径[%s]允许匿名访问", request.getUrl()));
-        }else{
+        } else {
             doNext(request, response);
         }
     }

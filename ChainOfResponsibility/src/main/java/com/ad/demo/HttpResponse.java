@@ -9,9 +9,10 @@ public class HttpResponse {
 
     /**
      * 向响应流中写入字符串
+     *
      * @param str
      */
-    public void writeString(String str){
+    public void writeString(String str) {
         // 这里是演示代码
         System.out.println(str);
     }

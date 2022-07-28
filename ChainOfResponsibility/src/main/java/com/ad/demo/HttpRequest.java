@@ -17,7 +17,8 @@ public class HttpRequest {
 
     // 这里省略一堆属性
     public HttpRequest(String url, Object user, String currentRoleName) {
-        this.url = url; this.user = user;
+        this.url = url;
+        this.user = user;
         this.currentRoleName = currentRoleName;
     }
 

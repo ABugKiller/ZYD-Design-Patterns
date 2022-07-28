@@ -13,8 +13,10 @@ import com.ad.factory.bean.Phone;
 public interface DigitalEquipmentFactory {
     //生产笔记本电脑
     public Laptop manufactureLaptop();
+
     //生产手机
     public Phone manufacturePhone();
+
     //生产平板电脑
     public Pad manufacturePad();
 }

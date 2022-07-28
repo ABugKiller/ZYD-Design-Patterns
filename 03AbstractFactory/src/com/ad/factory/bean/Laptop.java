@@ -9,6 +9,7 @@ package com.ad.factory.bean;
 public interface Laptop {
     /**
      * 编程
+     *
      * @author:ABugKiller
      * @date:Created in 2019/1/31 21:13
      * @return:

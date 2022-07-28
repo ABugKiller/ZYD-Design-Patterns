@@ -7,7 +7,7 @@ package com.ad.demo;
  */
 public class App {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         SecurityFilter userFilter = new UserFilter("^/user/.*");
         SecurityFilter roleFilter = new RoleFilter("^/admin/.*", "role_admin");
         SecurityFilter anonFilter = new AnonymousFilter("^/[^/]*");

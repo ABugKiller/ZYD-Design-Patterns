@@ -9,6 +9,8 @@ import com.ad.demo.base.UserServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 /**
  * @author zhengyingdeng
@@ -17,6 +19,7 @@ import java.util.List;
 public class UserController {
     private UserService userService = new UserServiceImpl(); // 依赖注入
     private List<RegObserver> regObservers = new ArrayList<>();
+    private Executor executor;
 
     // 一次性设置好，之后也不可能动态的修改
     public void setRegObservers(List observers) {
@@ -29,7 +32,12 @@ public class UserController {
         long userId = userService.register(telephone, password);
 
         for (RegObserver observer : regObservers) {
-            observer.handleRegSuccess(userId);
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    observer.handleRegSuccess(userId);
+                }
+            });
         }
 
         return userId;

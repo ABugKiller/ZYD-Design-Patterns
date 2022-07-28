@@ -11,7 +11,7 @@ import com.ad.factory.bean.Fruit;
  */
 public class Client {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         String[] factoryClasses = {
                 "com.ad.factory.AppleFactory",
                 "com.ad.factory.BananaFactoroy",

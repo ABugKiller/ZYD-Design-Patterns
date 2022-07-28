@@ -7,19 +7,19 @@ package com.ad.懒汉模式_线程安全;
  * @date:Created in 2019/2/1 14:09
  */
 public class Singleton {
-   private static volatile Singleton singleton = null;
+    private static volatile Singleton singleton = null;
 
-   private Singleton() {
+    private Singleton() {
 
-   }
+    }
 
-   public static Singleton getSingleton() {
-       synchronized (Singleton.class) {
-           if (singleton == null) {
-               singleton = new Singleton();
-           }
-       }
+    public static Singleton getSingleton() {
+        synchronized (Singleton.class) {
+            if (singleton == null) {
+                singleton = new Singleton();
+            }
+        }
 
-       return singleton;
-   }
+        return singleton;
+    }
 }

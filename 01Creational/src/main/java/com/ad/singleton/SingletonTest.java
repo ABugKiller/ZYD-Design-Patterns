@@ -22,7 +22,7 @@ public class SingletonTest {
         System.out.println(instance2.hashCode());
         if (instance1.equals(instance2)) {
             System.out.println("相等");
-        }else {
+        } else {
             System.out.println("不相等");
         }
     }

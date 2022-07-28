@@ -10,6 +10,7 @@ public interface Pad {
 
     /**
      * 玩游戏
+     *
      * @author:ABugKiller
      * @date:Created in 2019/1/31 21:14
      * @return:

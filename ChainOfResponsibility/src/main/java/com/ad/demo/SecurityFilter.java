@@ -8,7 +8,8 @@ package com.ad.demo;
 public abstract class SecurityFilter {
     private SecurityFilter next;
 
-    public SecurityFilter() {}
+    public SecurityFilter() {
+    }
 
     public SecurityFilter(SecurityFilter next) {
         this.next = next;
@@ -24,13 +25,14 @@ public abstract class SecurityFilter {
 
     /**
      * 调用下一个过滤器（如果不存在则直接返回）
-     * @param request 请求
+     *
+     * @param request  请求
      * @param response 响应
      */
-    protected void doNext(HttpRequest request, HttpResponse response){
-        if (null != next){
+    protected void doNext(HttpRequest request, HttpResponse response) {
+        if (null != next) {
             next.doFilter(request, response);
-        }else{
+        } else {
             System.out.println("已通过所有过滤器的过滤，当前默认行为为允许访问。当前请求已被接受。");
         }
     }
